@@ -1,3 +1,4 @@
+# encoding: utf8
 import os
 import flask
 import MySQLdb
@@ -10,7 +11,7 @@ def hello_world():
   storage = Storage()
   storage.populate()
   score = storage.score()
-  return "Helloo 李朝旭, %d!" % score
+  return u"Helloo 李朝旭, %d!" % score
 
 class Storage():
   def __init__(self):
